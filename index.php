@@ -1,2 +1,2 @@
 <?php
-echo 'Deployed from Github.';
+echo 'Deployed from Github. v0.1.';
