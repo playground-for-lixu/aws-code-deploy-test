@@ -43,6 +43,14 @@ permissions:
     mode: 750
     type:
       - file
+
+  - object: /var/www/html/assets/uploads
+    owner: apache
+    group: apache
+    mode: 550
+    type:
+      - file
+
   - object: /var/www/html
     owner: ec2-user
     group: apache
