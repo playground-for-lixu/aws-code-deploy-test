@@ -47,7 +47,7 @@ permissions:
   - object: /var/www/html/assets/uploads
     owner: apache
     group: apache
-    except: ["assets/uploads/.gitkeep"]
+    except: [".gitkeep"]
     mode: 550
     type:
       - file
