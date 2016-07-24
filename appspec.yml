@@ -23,7 +23,7 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: .
+  - source: /
     destination: /var/www/html
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions" 
@@ -39,12 +39,13 @@ permissions:
   - object: /var/www/html
     owner: ec2-user
     group: apache
-    mode: 754
+    except: ["assets/uploads/*"]
+    mode: 750
     type:
       - file
-  - object: /var/www/html/assets/uploads
+  - object: /var/www/html
     owner: ec2-user
     group: apache
-    mode: 774
+    mode: 770
     type:
       - directory
